@@ -6,7 +6,9 @@ import userRouter from './routes/user.js'
 import cors from 'cors';
 const port = 3000;
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin:"https://coursiya-frontend.vercel.app"
+}));
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
